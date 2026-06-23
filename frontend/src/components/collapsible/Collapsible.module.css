@@ -1,0 +1,48 @@
+.collapsible {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+  max-width: 15rem;
+}
+
+.collapsible--expanded {
+  gap: 0.5rem;
+}
+
+.collapsible__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.collapsible__caret {
+  transition-duration: 250ms;
+}
+
+.collapsible__caret--expanded {
+  transform: rotate(180deg);
+  transition-duration: 250ms;
+}
+
+.collapsible__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+
+.collapsible__content--expanded {
+  grid-template-rows: 1fr;
+}
+
+.collapsible__answer {
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .collapsible {
+    max-width: 20rem;
+  }
+}

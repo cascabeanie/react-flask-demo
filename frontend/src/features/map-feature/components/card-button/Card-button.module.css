@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  text-wrap: nowrap;
+  font-size: var(--text-xl);
+  border: 1px solid var(--border-primary);
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  color: rgb(0, 122, 255);
+  cursor: pointer;
+}

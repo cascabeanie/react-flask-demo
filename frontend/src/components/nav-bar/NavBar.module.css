@@ -1,0 +1,33 @@
+.navigation {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.navigation__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navigation__title {
+  white-space: nowrap;
+  font-family: var(--font-sans-code);
+  font-size: var(--text-xl);
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--text-lg);
+  margin-inline-end: 0.5rem;
+}
+
+.navigation__item:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}

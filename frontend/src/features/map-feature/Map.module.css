@@ -1,0 +1,52 @@
+/* Map container styles */
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG styles */
+.map__graphic {
+  background: #77c3e4;
+  padding: 1rem;
+  border-radius: 2rem;
+
+  /* position: relative; */
+}
+
+/* Path styles */
+.map__county {
+  fill: #83d0b0;
+  stroke: #fffff0;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.map__county--roi {
+  fill: #aaaaaa;
+}
+
+.map__county--selected {
+  fill: #2a8000;
+}
+
+/* Medium devices (landscape tablets, 768px (48rem)and up) */
+/* Large devices (laptops/desktops, 1024px (64rem) and up) */
+/* Set back to 64rem after testing */
+
+/* Media query styles */
+@media (min-width: 48rem) {
+  /* Prevent hover styles appearing on smaller devices */
+  .map__county:hover {
+    fill: #bbecd8;
+  }
+
+  .map__county--selected:hover {
+    fill: #2a8000;
+  }
+
+  .map__county--roi:hover {
+    fill: #aaaaaa;
+  }
+}
