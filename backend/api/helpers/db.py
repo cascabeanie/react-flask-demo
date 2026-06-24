@@ -1,10 +1,15 @@
 import sqlite3
+from pathlib import Path
 
 
 # Database connection helper function
 def db(queries, params=(), keys=()):
     # Connect to SQLite database
-    conn = sqlite3.connect("birds.db")
+    DB_PATH = Path(__file__).resolve().parent.parent / "birds.db"
+    conn = sqlite3.connect(DB_PATH)
+
+    # conn = sqlite3.connect("birds.db")
+
     # Provide named column access
     conn.row_factory = sqlite3.Row
     # Create cursor
