@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from db import db
+from .db import db
 
 # from helpers.append_tolist import append_to_list
 
