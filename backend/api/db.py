@@ -5,7 +5,7 @@ from pathlib import Path
 # Database connection helper function
 def db(queries, params=(), keys=()):
     # Connect to SQLite database
-    DB_PATH = Path(__file__).resolve().parent.parent / "birds.db"
+    DB_PATH = Path(__file__).resolve().parent / "birds.db"
     conn = sqlite3.connect(DB_PATH)
 
     # conn = sqlite3.connect("birds.db")
