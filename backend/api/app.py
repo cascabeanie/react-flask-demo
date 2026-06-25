@@ -7,6 +7,12 @@ from .db import db
 app = Flask(__name__)
 
 
+@app.before_request
+def debug_request():
+    print("REQUEST PATH:", request.path)
+
+
+@app.route("/")
 @app.route("/api/")
 def index():
 
@@ -27,6 +33,7 @@ def index():
     return jsonify(data)
 
 
+@app.route("/counties/<county>")
 @app.route("/api/counties/<county>")
 def all_counties(county):
 
@@ -54,6 +61,7 @@ def all_counties(county):
     return jsonify(data)
 
 
+@app.route("/counties")
 @app.route("/api/counties")
 def single_county():
 
@@ -74,6 +82,7 @@ def single_county():
     return jsonify(data)
 
 
+@app.route("/species/")
 @app.route("/api/species/")
 def all_species():
     # Query database for data
@@ -89,6 +98,7 @@ def all_species():
     return jsonify(data)
 
 
+@app.route("/species/<taxon_code>")
 @app.route("/api/species/<taxon_code>")
 def single_species(taxon_code):
     # Query database for data
@@ -103,6 +113,7 @@ def single_species(taxon_code):
 
 
 # Test route - not for prod
+@app.route("/species/images")
 @app.route("/api/species/images")
 def images():
     # Query database for data
